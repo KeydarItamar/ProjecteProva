@@ -53,7 +53,16 @@ public class Dispositivo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        new Dispositivo(100, "Nokia", "365");
+        new Dispositivo(100, "Nokia", "365");
+        new Dispositivo(100, "Nokia", "365");
+        new Dispositivo(100, "Nokia", "365");
+        new Dispositivo(100, "Nokia", "365");
+        
+        SmartPhone s = new SmartPhone("os", "sdfsdfsdf", 111, "nokia", "2011");
+       
+ 
+        
     }
     
 }

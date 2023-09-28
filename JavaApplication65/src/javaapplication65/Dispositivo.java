@@ -10,21 +10,21 @@ package javaapplication65;
  */
 public class Dispositivo {
       
-    int preuBase; 
+    double preuBase; 
     String Marca;
     String Model;
 
-    public Dispositivo(int preuBase, String Marca, String Model) {
+    public Dispositivo(double preuBase, String Marca, String Model) {
         this.preuBase = preuBase;
         this.Marca = Marca;
         this.Model = Model;
     }
 
-    public int getPreuBase() {
+    public double getPreuBase() {
         return preuBase;
     }
 
-    public void setPreuBase(int preuBase) {
+    public void setPreuBase(double preuBase) {
         this.preuBase = preuBase;
     }
 
@@ -44,7 +44,7 @@ public class Dispositivo {
         this.Model = Model;
     }
 
-    public int preuFinal() {
+    public double preuFinal() {
         return getPreuBase() * 2;
     }
 

@@ -10,17 +10,19 @@ package javaapplication65;
  */
 public class SmartPhone extends Dispositivo {
     String SistemaOperatiu;
-    String Hardware;
     boolean accelerometre = false;
+    boolean gps = true;
 
     public SmartPhone(int preuBase, String Marca, String Model) {
         super(preuBase, Marca, Model);
     }
 
-    public SmartPhone(String SistemaOperatiu, String Hardware, int preuBase, String Marca, String Model) {
+    public SmartPhone(int preuBase, String Marca, String Model, String SistemaOperatiu, boolean accelerometre,
+            boolean gps) {
         super(preuBase, Marca, Model);
         this.SistemaOperatiu = SistemaOperatiu;
-        this.Hardware = Hardware;
+        this.accelerometre = accelerometre;
+        this.gps = gps;
     }
 
     public String getSistemaOperatiu() {
@@ -31,14 +33,6 @@ public class SmartPhone extends Dispositivo {
         this.SistemaOperatiu = SistemaOperatiu;
     }
 
-    public String getHardware() {
-        return Hardware;
-    }
-
-    public void setHardware(String Hardware) {
-        this.Hardware = Hardware;
-    }
-
     public boolean isAccelerometre() {
         return accelerometre;
     }
@@ -47,18 +41,27 @@ public class SmartPhone extends Dispositivo {
         this.accelerometre = accelerometre;
     }
 
+    public boolean isGps() {
+        return gps;
+    }
+
+    public void setGps(boolean gps) {
+        this.gps = gps;
+    }
+
     public double preuFinalSmartPhone() {
-        if (isAccelerometre())
-            return getPreuBase() * 1.10 + getPreuBase();
-        else if (isAccelerometre() /*&& isGps()*/)
-            return getPreuBase() * 1.15 + getPreuBase();
-        return preuFinal();
+        double preu = super.preuFinal();
+        if (isAccelerometre() && isGps())
+            return preu * 1.15;
+        else if (isAccelerometre())
+            return preu * 1.10;
+        return preu;
     }
 
     @Override
     public String toString() {
-        return "Smartphone: " + "SistemaOperatiu=" + SistemaOperatiu + ", Hardware=" + Hardware + ", accelerometre="
-                + accelerometre;
+        return "Smartphone: SistemaOperatiu = " + SistemaOperatiu + ", Hardware: acceleròmetre = " + accelerometre
+                + ", gps = " + gps;
     }
 
 }

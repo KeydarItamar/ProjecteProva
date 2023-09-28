@@ -44,6 +44,10 @@ public class Dispositivo {
         this.Model = Model;
     }
 
+    public int preuFinal() {
+        return getPreuBase() * 2;
+    }
+
     @Override
     public String toString() {
         return "Dispositivo :" + ", Marca=" + Marca + ", Model=" + Model + "preuBase=" + preuBase;

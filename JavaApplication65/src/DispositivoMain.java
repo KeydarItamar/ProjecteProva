@@ -15,15 +15,19 @@ public class DispositivoMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new Dispositivo(100, "Nokia", "365");
-        new Dispositivo(100, "Nokia", "365");
-        new Dispositivo(100, "Nokia", "365");
-        new Dispositivo(100, "Nokia", "365");
-        new Dispositivo(100, "Nokia", "365");
+        Dispositivo rellotge = new Dispositivo(100, "Rellotge Intel·ligent", "2");
+        SmartPhone android = new SmartPhone(300, "Nokia", "Andrioid");
+        SmartPhone iPhone = new SmartPhone(500, "Apple", "IPhone", "iOS", true, true);
+        Tablet tablet = new Tablet(400, "Samsung", "Air", 16);
+        Dispositivo nokia = new Dispositivo(100, "Nokia", "365");
         
-        SmartPhone s = new SmartPhone("os", "sdfsdfsdf", 111, "nokia", "2011");
-        Tablet j = new Tablet(200, 200, "apple", "asd");
- 
+        System.out.println(rellotge);
+        System.out.println(android);
+        System.out.println(iPhone);
+        System.out.println(tablet);
+        System.out.println(nokia);
+        System.out.println("Preu final IPhone: "+ iPhone.preuFinalSmartPhone());
+        
         
     }
 }

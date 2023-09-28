@@ -11,7 +11,7 @@ package javaapplication65;
 public class Tablet extends Dispositivo{
     int pulsades;
 
-    public Tablet(int pulsades, int preuBase, String Marca, String Model) {
+    public Tablet(double preuBase, String Marca, String Model, int pulsades) {
         super(preuBase, Marca, Model);
         this.pulsades = pulsades;
     }
@@ -24,11 +24,11 @@ public class Tablet extends Dispositivo{
         this.pulsades = pulsades;
     }
 
-    public int getPreuBase() {
+    public double getPreuBase() {
         return preuBase;
     }
 
-    public void setPreuBase(int preuBase) {
+    public void setPreuBase(double preuBase) {
         this.preuBase = preuBase;
     }
 

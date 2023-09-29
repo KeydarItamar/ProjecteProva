@@ -6,9 +6,9 @@ package javaapplication65;
 
 /**
  *
- * @author Itamar
+ * @author Itamar i Jordi
  */
-public class Tablet extends Dispositivo{
+public class Tablet extends Dispositivo {
     int pulsades;
 
     public Tablet(double preuBase, String Marca, String Model, int pulsades) {
@@ -50,10 +50,7 @@ public class Tablet extends Dispositivo{
 
     @Override
     public String toString() {
-        return "Tablet{" + "pulsades=" + pulsades + '}';
+        return super.toString() + "\n\tPolzades: " + pulsades;
     }
 
-
-    
-    
 }

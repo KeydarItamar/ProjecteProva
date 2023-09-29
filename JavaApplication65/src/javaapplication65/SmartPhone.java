@@ -6,7 +6,7 @@ package javaapplication65;
 
 /**
  *
- * @author Itamar
+ * @author Itamar i Jordi
  */
 public class SmartPhone extends Dispositivo {
     String SistemaOperatiu;
@@ -60,8 +60,8 @@ public class SmartPhone extends Dispositivo {
 
     @Override
     public String toString() {
-        return "Smartphone: SistemaOperatiu = " + SistemaOperatiu + ", Hardware: acceleròmetre = " + accelerometre
-                + ", gps = " + gps;
+        return super.toString() + "\n\tSistema operatiu = " + SistemaOperatiu + "\n\tAcceleròmetre = " + accelerometre
+                + "\n\tGPS = " + gps;
     }
 
 }

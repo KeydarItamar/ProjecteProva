@@ -6,11 +6,11 @@ package javaapplication65;
 
 /**
  *
- * @author Itamar
+ * @author Itamar i Jordi
  */
-public class Dispositivo {
-      
-    double preuBase; 
+public class Dispositivo implements GammaAlta {
+
+    double preuBase;
     String Marca;
     String Model;
 
@@ -50,7 +50,7 @@ public class Dispositivo {
 
     @Override
     public String toString() {
-        return "Dispositivo :" + ", Marca=" + Marca + ", Model=" + Model + "preuBase=" + preuBase;
+        return "Dispositiu: " + "\n\tMarca = " + Marca + "\n\tModel = " + Model + "\n\tPreu base = " + preuBase;
     }
-    
+
 }
